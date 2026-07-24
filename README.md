@@ -22,8 +22,8 @@ Arduino library for reading **two 8-position DIP switches** via an **MCP23017**
 ### MCP23017 ↔ Microcontroller (Qwiic / I²C)
 
 ```
-MCP23017          Board
-────────          ─────
+MCP23017         Board
+────────         ─────
 VCC       ──→    3.3 V  (or 5 V if your MCU is 5 V)
 GND       ──→    GND
 SDA       ──→    SDA  (Qwiic Blue)
@@ -54,25 +54,25 @@ Each DIP switch pin connects between the **MCP23017 GPIO pin** and **GND**.
 The library enables internal pull-ups, so **no external resistors are needed**.
 
 ```
-DIP Switch 1                 MCP23017
-────────────                 ────────
-Position 1  ─────────────── GPA0
-Position 2  ─────────────── GPA1
-Position 3  ─────────────── GPA2
-Position 4  ─────────────── GPA3
-Position 5  ─────────────── GPA4
-Position 6  ─────────────── GPA5
-Position 7  ─────────────── GPA6
-Position 8  ─────────────── GPA7
-Common (COM)─────────────── GND
+DIP Switch 1                   MCP23017
+────────────                   ────────
+Position 1    ───────────────  GPA0
+Position 2    ───────────────  GPA1
+Position 3    ───────────────  GPA2
+Position 4    ───────────────  GPA3
+Position 5    ───────────────  GPA4
+Position 6    ───────────────  GPA5
+Position 7    ───────────────  GPA6
+Position 8    ───────────────  GPA7
+Common (COM)  ───────────────  GND
 
-DIP Switch 2                 MCP23017
-────────────                 ────────
-Position 1  ─────────────── GPB0
-Position 2  ─────────────── GPB1
+DIP Switch 2                   MCP23017
+────────────                   ────────
+Position 1    ───────────────  GPB0
+Position 2    ───────────────  GPB1
 ...
-Position 8  ─────────────── GPB7
-Common (COM)─────────────── GND
+Position 8    ───────────────  GPB7
+Common (COM)  ───────────────  GND
 ```
 
 > **Logic:** Internal pull-up holds pin HIGH (OFF). When switch closes, pin is
@@ -158,7 +158,7 @@ Bit: 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
      │S2 │S2 │S2 │S2 │S2 │S2 │S2 │S2 │S1 │S1 │S1 │S1 │S1 │S1 │S1 │S1 │
      │P8 │P7 │P6 │P5 │P4 │P3 │P2 │P1 │P8 │P7 │P6 │P5 │P4 │P3 │P2 │P1 │
      └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
-       ├─────────── DIP Switch 2 ───────────┤├─────────── DIP Switch 1 ───────────┤
+     ├──────── DIP Switch 2 ────────┤ ├──────── DIP Switch 1 ────────┤
 ```
 
 `S1`/`S2` = Switch 1/2, `P1`–`P8` = position. `1` = ON, `0` = OFF.
