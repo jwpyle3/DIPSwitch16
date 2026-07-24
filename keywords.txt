@@ -1,0 +1,31 @@
+# Syntax highlighting for DIPSwitch16 library
+# Format: KEYWORD\tTOKEN_TYPE
+# KEYWORD1 = class/datatype  KEYWORD2 = method/function  LITERAL1 = constant
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DIPSwitch16	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+read	KEYWORD2
+readSwitch1	KEYWORD2
+readSwitch2	KEYWORD2
+readPosition	KEYWORD2
+isConnected	KEYWORD2
+getAddress	KEYWORD2
+setAddress	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+MCP23017_DEFAULT_ADDR	LITERAL1
+DIPSWITCH16_OK	LITERAL1
+DIPSWITCH16_ERR_ADDR	LITERAL1
+DIPSWITCH16_ERR_I2C	LITERAL1
