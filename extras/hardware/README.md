@@ -6,7 +6,7 @@ for I²C address selection + power-LED enable, and dual Qwiic connectors for
 daisy-chaining.
 
 ```
-Board:  66 × 55.5 mm, 2-layer, 1.6 mm FR-4, 4 mm rounded corners
+Board:  58.5 × 55.5 mm, 2-layer, 1.6 mm FR-4, 4 mm rounded corners
 Copper: 1 oz  ·  Min trace/clearance used: 0.40 / 0.25 mm (easy for any fab)
 Finish: HASL or ENIG — either is fine
 ```
@@ -30,7 +30,7 @@ check is cheap insurance.
 
 ## How the circuit works
 
-- **U1 MCP23017 (DIP-28, socket recommended).** GPB0–7 → SW2 (left),
+- **U1 MCP23017 (SPDIP-28, narrow 0.3" rows — socket recommended).** GPB0–7 → SW2 (left),
   GPA0–7 → SW1 (right). Each switch position shorts its GPIO to GND when ON;
   the library enables the chip's internal pull-ups, so there are no external
   resistors on the switch lines — exactly the wiring in the library README.
@@ -47,7 +47,7 @@ check is cheap insurance.
 
 | Ref | Part | Package | Qty |
 |---|---|---|---|
-| U1 | MCP23017-E/SP | DIP-28 (0.6") + socket | 1 |
+| U1 | MCP23017-E/SP | SPDIP-28, 0.3" / 7.62 mm rows + narrow socket | 1 |
 | SW1, SW2 | 8-position DIP switch | DIP-16, 2.54 mm | 2 |
 | SW3 | 4-position DIP switch | DIP-8, 2.54 mm | 1 |
 | J1, J2 | JST SH 4-pin side-entry (Qwiic), SM04B-SRSS-TB compatible | SMD | 2 |
